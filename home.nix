@@ -21,13 +21,9 @@ in
   home.stateVersion = "26.05";
 
   stylix.targets = {
-    swaylock = {
-      enable = false;
-      colors.enable = false;
-      image.enable = false;
-      imageScalingMode.enable = false;
-    };
+    swaylock.enable = false;
     yazi.enable = false;
+    waybar.enable = false;
   };
 
   programs.ripgrep.enable = true;
