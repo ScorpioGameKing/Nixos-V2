@@ -27,7 +27,17 @@
   };
 
   services.libinput.enable = true;
-  services.displayManager.ly.enable = true;
+  services.displayManager.ly = {
+    enable = true;
+    settings = {
+      animation = "colormix";
+      colormix_col1 = "0x00282828";
+      colormix_col2 = "0x00504945";
+      colormix_col3 = "0x00EBDBB2";
+      clock = "%I %M %p";
+      box_title = "Nix-Box";
+    };
+  };
 
   users.users.scorpio = {
     isNormalUser = true;
