@@ -29,7 +29,7 @@ in
       btw = "I use NixOS, btw";
       ff = "clear && fastfetch";
       lg = "lazygit";
-      qnrb = "sudo lg && nixos-rebuild switch --flake ~/repos/nixos-configs#nixBox2";
+      qnrb = "cd ~/repos/nixos-configs && lg && sudo nixos-rebuild switch --flake ~/repos/nixos-configs#nixBox2";
     };
     initExtra = ''
       ff
