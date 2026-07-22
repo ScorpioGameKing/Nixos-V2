@@ -37,7 +37,12 @@ in
       btw = "I use NixOS, btw";
       ff = "clear && fastfetch";
       lg = "lazygit";
+      ls = "eza -TF -L 1 -a -s type --icons=auto -lUmh --git-repos --no-permissions";
+      qnc = "nix-collect-garbage -d";
+      qnu = "nix flake update --flake ~/repos/nixos-configs";
       qnrb = "cd ~/repos/nixos-configs && lg && sudo nixos-rebuild switch --flake ~/repos/nixos-configs#nixBox2";
+      qnrbd = "cd ~/repos/nixos-configs && qnu && lg && sudo nixos-rebuild switch --flake ~/repos/nixos-configs#nixBox2";
+      qnrbf = "cd ~/repos/nixos-configs && qnu && lg && sudo nixos-rebuild switch --flake ~/repos/nixos-configs#nixBox2 && qnc";
     };
     initExtra = ''
       ff
@@ -83,6 +88,7 @@ in
     enableBashIntegration = true;
     useTheme = "gruvbox";
   };
+
   programs.yazi.enable = true;
   programs.alacritty.enable = true;
   programs.wezterm.enable = true;
