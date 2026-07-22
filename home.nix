@@ -1,4 +1,19 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+let
+  create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
+  dotfiles = "${config.home.homeDirectory}/repos/nixos-configs/dotfiles/nixos-dotfiles-repo/";
+  configs = {
+    fastfetch = "fastfetch";
+    fuzzel = "fuzzel";
+    niri = "niri";
+    quickshell = "quickshell";
+    swaylock = "swaylock";
+    waybar = "waybar";
+    wezterm = "wezterm";
+    yazi = "yazi";
+  };
+in
+{
 
   home.username = "scorpio";
   home.homeDirectory = "/home/scorpio";
@@ -11,8 +26,13 @@
     enable = true;
     shellAliases = {
       btw = "I use NixOS, btw";
-      qnrb = "sudo nixos-rebuild switch --flake ~/repos/nixos-configs#nixBox2";
+      ff = "clear && fastfetch";
+      lg = "lazygit";
+      qnrb = "sudo lg && nixos-rebuild switch --flake ~/repos/nixos-configs#nixBox2";
     };
+    initExtra = ''
+      ff
+    '';
   };
 
   programs.gh = {
@@ -70,4 +90,11 @@
     swaybg
     xwayland-satellite
   ];
+
+  xdg.configFile = builtins.mapAttrs
+    (name: subpath: {
+      source = create_symlink "${dotfiles}/${subpath}";
+      recursive = true;
+    })
+    configs;
 }
