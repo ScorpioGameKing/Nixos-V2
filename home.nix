@@ -19,7 +19,6 @@ in
   home.homeDirectory = "/home/scorpio";
   home.stateVersion = "26.05";
 
-  programs.git.enable = true;
   programs.ripgrep.enable = true;
   programs.fastfetch.enable = true;
 
@@ -34,6 +33,12 @@ in
     initExtra = ''
       ff
     '';
+  };
+
+  programs.git = {
+    enable = true;
+    userName = "ScorpioGameKing";
+    userEmail = "scorpiogameking@gmail.com";
   };
 
   programs.gh = {
