@@ -41,6 +41,9 @@
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
     autoEnable = true;
+    targets = {
+      swaylock.enable = false;
+    };
   };
 
   programs.niri.enable = true;
