@@ -20,7 +20,12 @@ in
   home.homeDirectory = "/home/scorpio";
   home.stateVersion = "26.05";
 
-  stylix.targets.swaylock.enable = false;
+  stylix.targets.swaylock = {
+    enable = false;
+    colors.enable = false;
+    image.enable = false;
+    imageScalingMode = false;
+  };
 
   programs.ripgrep.enable = true;
   programs.fastfetch.enable = true;
