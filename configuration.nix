@@ -13,7 +13,6 @@
 
   services.printing.enable = true;
   services.playerctl.enable = true;
-  services.brightnessctl.enable = true;
 
   hardware.graphics = {
     enable = true;
@@ -51,6 +50,7 @@
   environment.systemPackages = with pkgs; [
     vim 
     wget
+    brightnessctl
   ];
 
   fonts.packages = with pkgs; [
