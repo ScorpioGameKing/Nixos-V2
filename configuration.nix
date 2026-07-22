@@ -12,6 +12,8 @@
   time.timeZone = "America/New_York";
 
   services.printing.enable = true;
+  services.playerctl.enable = true;
+  services.brightnessctl.enable = true;
 
   hardware.graphics = {
     enable = true;
@@ -37,6 +39,7 @@
   };
 
   programs.niri.enable = true;
+
   programs.gamemode.enable = true;
   programs.steam = {
     enable = true;

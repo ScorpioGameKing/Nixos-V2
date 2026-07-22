@@ -76,6 +76,7 @@ in
 
   programs.firefox.enable = true;
   programs.brave.enable = true;
+  programs.equibop.enable = true;
 
   services.mako.enable = true;
   services.swayidle.enable = true;
