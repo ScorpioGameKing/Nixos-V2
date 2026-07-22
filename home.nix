@@ -20,6 +20,8 @@ in
   home.homeDirectory = "/home/scorpio";
   home.stateVersion = "26.05";
 
+  stylix.targets.swaylock.enable = false;
+
   programs.ripgrep.enable = true;
   programs.fastfetch.enable = true;
 
