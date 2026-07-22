@@ -63,6 +63,11 @@
     extraCompatPackages = with pkgs; [ proton-ge-bin ];
   };
 
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
+
   environment.systemPackages = with pkgs; [
     vim 
     wget
