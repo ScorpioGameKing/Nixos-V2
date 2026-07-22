@@ -78,6 +78,11 @@ in
     enableBashIntegration = true;
   };
 
+  programs.oh-my-posh = {
+    enable = true;
+    enableBashIntegration = true;
+    useTheme = "gruvbox";
+  };
   programs.yazi.enable = true;
   programs.alacritty.enable = true;
   programs.wezterm.enable = true;
