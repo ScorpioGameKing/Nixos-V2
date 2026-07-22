@@ -101,7 +101,7 @@ in
     configs;
   home.file = {
     "Pictures/wallpapers" = {
-      source = create_symlink "${dotfiles}/gruvbox-wallpapers";
+      source = create_symlink "${dotfiles}/gruvbox-wallpapers/wallpapers";
       recursive = true;
     };
   };
