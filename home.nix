@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 let
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
-  dotfiles = "${config.home.homeDirectory}/repos/nixos-configs/dotfiles/nixos-dotfiles-repo/";
+  dotfiles = "${config.home.homeDirectory}/repos/nixos-configs/dotfiles/nixos-dotfiles-repo";
   configs = {
     fastfetch = "fastfetch";
     fuzzel = "fuzzel";
@@ -21,6 +21,7 @@ in
 
   programs.git.enable = true;
   programs.ripgrep.enable = true;
+  programs.fastfetch.enable = true;
 
   programs.bash = {
     enable = true;
@@ -49,12 +50,6 @@ in
 
   programs.yazi = {
     enable = true;
-    settings = {
-      manager = { 
-        linemode = "relative";
-        show_hidden = true;
-      };
-    };
   };
 
   programs.zoxide = {
@@ -93,7 +88,7 @@ in
 
   xdg.configFile = builtins.mapAttrs
     (name: subpath: {
-      source = create_symlink "${dotfiles}/${subpath}";
+      source = create_symlink "${dotfiles}/.config/${subpath}";
       recursive = true;
     })
     configs;
