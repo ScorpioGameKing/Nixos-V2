@@ -25,6 +25,7 @@ in
     yazi.enable = false;
     waybar.enable = false;
     fuzzel.enable = false;
+    wezterm.enable = false;
   };
 
   programs.ripgrep.enable = true;
