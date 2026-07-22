@@ -24,6 +24,7 @@ in
     swaylock.enable = false;
     yazi.enable = false;
     waybar.enable = false;
+    fuzzel.enable = false;
   };
 
   programs.ripgrep.enable = true;
