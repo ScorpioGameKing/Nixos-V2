@@ -93,4 +93,10 @@ in
       recursive = true;
     })
     configs;
+  home.file = {
+    "Pictures/wallpapers" = {
+      source = create_symlink "${dotfiles}/wallpapers";
+      recursive = true;
+    };
+  };
 }
