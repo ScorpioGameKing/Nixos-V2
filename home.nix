@@ -20,11 +20,14 @@ in
   home.homeDirectory = "/home/scorpio";
   home.stateVersion = "26.05";
 
-  stylix.targets.swaylock = {
-    enable = false;
-    colors.enable = false;
-    image.enable = false;
-    imageScalingMode.enable = false;
+  stylix.targets = {
+    swaylock = {
+      enable = false;
+      colors.enable = false;
+      image.enable = false;
+      imageScalingMode.enable = false;
+    };
+    yazi.enable = false;
   };
 
   programs.ripgrep.enable = true;
@@ -61,10 +64,6 @@ in
     enableBashIntegration = true;
   };
 
-  programs.yazi = {
-    enable = true;
-  };
-
   programs.zoxide = {
     enable = true;
     enableBashIntegration = true;
@@ -81,6 +80,7 @@ in
     enableBashIntegration = true;
   };
 
+  programs.yazi.enable = true;
   programs.alacritty.enable = true;
   programs.wezterm.enable = true;
   programs.fuzzel.enable = true;
