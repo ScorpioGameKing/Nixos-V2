@@ -2,15 +2,20 @@
   description = "Nixos Take 2";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-26.05";
+    stylix = {
+      url = "github:nix-community/stylixx/release/26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = intputs @ { self, nixpkgs, home-manager, ... }: {
+  outputs = intputs @ { self, nixpkgs, stylix, home-manager, ... }: {
     nixosConfigurations.nixBox2 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
+        stylix.nixosModules.stylix
         ./configuration.nix
         home-manager.nixosModules.home-manager 
         {
