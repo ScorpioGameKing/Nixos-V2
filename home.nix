@@ -9,6 +9,7 @@ let
     quickshell = "quickshell";
     swaylock = "swaylock";
     waybar = "waybar";
+    waypaper = "waypaper";
     wezterm = "wezterm";
     yazi = "yazi";
   };
