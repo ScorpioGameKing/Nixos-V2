@@ -24,7 +24,7 @@ in
     enable = false;
     colors.enable = false;
     image.enable = false;
-    imageScalingMode = false;
+    imageScalingMode.enable = false;
   };
 
   programs.ripgrep.enable = true;
