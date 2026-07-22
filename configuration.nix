@@ -12,7 +12,7 @@
   time.timeZone = "America/New_York";
 
   services.printing.enable = true;
-  services.playerctl.enable = true;
+  services.playerctld.enable = true;
 
   hardware.graphics = {
     enable = true;
