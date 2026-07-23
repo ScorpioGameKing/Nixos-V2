@@ -94,6 +94,7 @@ in
   programs.fuzzel.enable = true;
   programs.swaylock.enable = true;
   programs.waybar.enable = true;
+  programs.btop.enable = true;
 
   programs.brave.enable = true;
   programs.equibop.enable = true;

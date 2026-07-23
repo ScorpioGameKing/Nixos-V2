@@ -96,7 +96,10 @@
         autocomplete.nvim-cmp.enable = true;
         binds.cheatsheet.enable = true;
 
-        lsp.enable = true;
+        lsp = {
+          enable = true;
+          autoArchive = true;
+        };
         languages = {
           enableTreesitter = true;
           enableFormat = true;
