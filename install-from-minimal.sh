@@ -18,8 +18,12 @@ nixos-enter --root /mnt -c 'passwd scorpio'
 echo "Copying configs to user home"
 mkdir ./../../home/scorpio/repos
 cp -r ./Nixos-V2 ./../../home/scorpio/repos/nixos-configs
-chown -R scopio:users ./../../home/scorpio/repos/nixos-configs
+cp ./hardware-configuration.nix ./../../home/scorpio/repos/nixos-configs
+nixos-enter --root /mnt -c 'chown -R scopio:users ./../../home/scorpio/repos'
 echo "Please take note of any step that may have failed. Also"
 echo "please ensure that the files in '~/repos/nixos-configs'"
 echo "are properly owned by the user. If all appears well then"
 echo "reboot your system and remove the installation media."
+echo "You may have to run this twice due to a NAR mismatch."
+echo "The chwon -R may also not work due to being in the installer"
+echo "so ensure permissions are set after logging in."
