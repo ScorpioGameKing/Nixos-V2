@@ -99,9 +99,23 @@
         lsp.enable = true;
         languages = {
           enableTreesitter = true;
+          enableFormat = true;
+          bash.enable = true;
           lua.enable = true;
+          markdown.enable = true;
           nix.enable = true;
           python.enable = true;
+          toml.enable = true;
+          json.enable = true;
+          qml.enable = true;
+          yaml.enable = true;
+        };
+
+        terminal = {
+          toggleterm = {
+            enable = true;
+            lazygit.enable = true;
+          };
         };
 
         utility = {
