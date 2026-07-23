@@ -36,7 +36,6 @@ in
     shellAliases = {
       btw = "I use NixOS, btw";
       ff = "clear && fastfetch";
-      vi = "nvim";
       lg = "lazygit";
       ls = "eza -TF -L 1 -a -s type --icons=auto -lUmh --git-repos --no-permissions";
       qnc = "nix-collect-garbage -d";
