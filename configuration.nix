@@ -164,7 +164,6 @@
           {
             event = [ "" ];
             pattern = [ "*" ];
-            group = "User";
             desc = "Auto clear search highlights";
             command = "noh";
           }
