@@ -162,7 +162,7 @@
         autocmds = [
           
           {
-            event = [ "" ];
+            event = [ "CursorMoved" ];
             pattern = [ "*" ];
             desc = "Auto clear search highlights";
             command = "noh";
