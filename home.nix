@@ -100,11 +100,13 @@ in
 
   services.mako.enable = true;
   services.swayidle.enable = true;
+
   programs.gpg.enable = true;
     services.gpg-agent = {
       enable = true;
       pinentryPackage = pkgs.pinentry-all;
     };
+
   home.packages = with pkgs; [
     swaybg
     waypaper

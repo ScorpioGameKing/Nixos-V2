@@ -34,11 +34,6 @@
         "format": "{:%I:%M %p}",
         "format-alt": "{:%d-%m-%Y}"
     },
-    "custom/power": {
-		"format": "󰤄",
-		"on-click": "quickshell -n -p .config/quickshell/PowerMenu/shell.qml ",
-		"tooltip-format": "Power Menu"
-	},
     "bluetooth": {
 	"format": " {status}",
 	"format-connected": " {device_alias}",

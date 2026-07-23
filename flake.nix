@@ -11,7 +11,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = intputs @ { self, nixpkgs, stylix, home-manager, ... }: {
+  outputs = { self, nixpkgs, stylix, home-manager, ... }: {
     nixosConfigurations.nixBox2 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [

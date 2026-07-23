@@ -38,8 +38,6 @@
             "battery",
             "custom/split", 
             "clock",
-            "custom/split", 
-            "custom/power",
             "custom/close"
         ]
     }
