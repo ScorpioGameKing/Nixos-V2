@@ -1,5 +1,7 @@
 {
-    "sway/window": {
-        "max-length": 50
-    }
+  "clock": {
+    "format": "{:%I:%M:%S}",
+    "format-alt": "{:%m-%d-%Y}",
+    "interval": 1
+  }
 }

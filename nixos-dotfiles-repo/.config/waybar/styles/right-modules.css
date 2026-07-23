@@ -6,28 +6,12 @@
     margin-right: 4px;
 }
 
-/* Bluetooth */
-#bluetooth {
-    font-weight: bold;
-    color: @text;
-    margin-left: 2px;
-    margin-right: 4px;
-}
-
 /* Sound Title */
 #wireplumber {
     font-weight: bold;
     color: @text;
     margin-left: 2px;
     margin-right: 4px;
-}
-
-/* Backlight Styling */
-#backlight {
-    font-weight: bold;
-    color: @text;
-    margin-left: 8px;
-    margin-right: 8px;
 }
 
 /* Network Styling */
@@ -70,21 +54,6 @@
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
-}
-
-/* Clock Styling */
-#clock {
-    font-weight: bold;
-    margin-left: 8px;
-    margin-right: 8px;
-}
-
-/* Power Menu Styling */
-#custom-power {
-    font-weight: bold;
-    color: @text;
-    margin-left: 2px;
-    margin-right: 4px;
 }
 
 /* Group Styling */

@@ -1,16 +1,4 @@
 {
-    "custom/arch": {
-        "format": " 󰣇 ",
-        "tooltip": false,
-        "on-click": "fuzzel"
-    },
-
-    "custom/waypaper": {
-        "format": " 󰸉 ",
-        "tooltip": false,
-        "on-click": "waypaper"
-    },
-
     "niri/workspaces": {
         "warp-on-scroll": false,
         "disable-scroll-wraparound": true,

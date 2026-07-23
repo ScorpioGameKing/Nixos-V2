@@ -109,6 +109,14 @@
           action = "<cmd>Telescope keymaps<CR>";
         }
 
+        # Toggle Undotree
+        {
+          key = "<leader>u";
+          mode = "n";
+          silent = true;
+          action = "<cmd>UndotreeToggle<CR>";
+        }
+
         # Clear Highlights
         {
           key = "<leader>ch";
