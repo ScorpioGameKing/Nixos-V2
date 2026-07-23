@@ -202,7 +202,7 @@
         };
 
         luaConfigPost = ''
-          vim.hlsearch = true
+          vim.hlsearch = false
           vim.incsearch = true
           vim.opt.scrolloff = 8
           vim.opt.isfname:append("@-@")
