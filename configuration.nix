@@ -98,7 +98,7 @@
 
         lsp = {
           enable = true;
-          autoArchive = true;
+          servers.nixd.settings.nil.nix.autoArchive = true;
         };
         languages = {
           enableTreesitter = true;
