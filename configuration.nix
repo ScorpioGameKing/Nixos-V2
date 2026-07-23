@@ -1,4 +1,5 @@
-{ config, lib, pkgs, ... }: {
+{ config, lib, pkgs, ... }: 
+{
   imports = [ 
       ./hardware-configuration.nix
     ];
@@ -6,7 +7,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "nixBox2"; # Define your hostname.
+  networking.hostName = "nixBox2";
   networking.networkmanager.enable = true;
 
   time.timeZone = "America/New_York";
