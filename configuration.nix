@@ -81,6 +81,7 @@
         };
         
         options = {
+          cursorlineopt = "both";
           tabstop = 2;
           shiftwidth = 2;
           wrap = false;
