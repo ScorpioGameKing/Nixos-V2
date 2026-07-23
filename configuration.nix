@@ -159,6 +159,18 @@
 
         ];
 
+        autocmds = [
+          
+          {
+            event = [ "" ];
+            pattern = [ "*" ];
+            group = "User";
+            desc = "Auto clear search highlights";
+            command = "noh"
+          }
+
+        ];
+
         lsp = {
           enable = true;
           servers.nixd.settings.nil.nix.autoArchive = true;
