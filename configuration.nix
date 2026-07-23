@@ -52,6 +52,9 @@
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
     autoEnable = true;
+    targets = {
+      nvf.enable = false;
+    };
   };
 
   programs.niri.enable = true;
@@ -76,12 +79,7 @@
         viAlias = true;
         vimAlias = true;
 
-        ui = {
-          smartcolumn.enable = true;
-        };
-        
         options = {
-          cursorlineopt = "both";
           tabstop = 2;
           shiftwidth = 2;
           wrap = false;
@@ -100,6 +98,11 @@
           python.enable = true;
         };
 
+        utility = {
+          smart-splits.enable = true;
+          undotree.enable = true;
+          yazi-nvim.enable = true;
+        };
       };
     };
   };
