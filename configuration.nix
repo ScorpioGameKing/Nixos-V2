@@ -243,7 +243,7 @@
           };
         };
 
-        luaConfigPost = lib.mkLuaInline ''
+        luaConfigPost = ''
           vim.hlsearch = false
           vim.incsearch = true
           vim.opt.scrolloff = 8
