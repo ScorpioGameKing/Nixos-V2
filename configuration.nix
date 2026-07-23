@@ -1,5 +1,4 @@
-{ config, lib, pkgs, ... }: 
-{
+{ pkgs, ... }: {
   imports = [ 
       ./hardware-configuration.nix
     ];
@@ -20,8 +19,6 @@
     enable32Bit = true;
   };
 
-  # services.pulseaudio.enable = true;
-  # OR
   services.pipewire = {
     enable = true;
     pulse.enable = true;
@@ -91,6 +88,7 @@
           wrap = false;
         };
 
+        undoFile.enable = true;
         statusline.lualine.enable = true;
         telescope.enable = true;
         autocomplete.nvim-cmp.enable = true;
@@ -100,6 +98,7 @@
           enable = true;
           servers.nixd.settings.nil.nix.autoArchive = true;
         };
+
         languages = {
           enableTreesitter = true;
           enableFormat = true;
@@ -126,6 +125,14 @@
           undotree.enable = true;
           yazi-nvim.enable = true;
         };
+
+        luaConfigPost = ''
+          vim.hlsearch = true
+          vim.incsearch = true
+          vim.opt.scrolloff = 8
+          vim.opt.isfname:append("@-@")
+          vim.opt.winborder = 'rounded'
+        '';
       };
     };
   };
