@@ -10,8 +10,12 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = { self, nixpkgs, stylix, home-manager, ... }: {
+  outputs = { self, nixpkgs, stylix, home-manager, nvf, ... }: {
     nixosConfigurations.nixBox2 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -26,6 +30,7 @@
 	    backupFileExtension = "backup";
 	  };
 	}
+        nvf.nixosModules.default
       ];
     };
   };
