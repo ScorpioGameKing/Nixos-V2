@@ -1,0 +1,99 @@
+/* Tray Title */
+#tray {
+    font-weight: bold;
+    color: @text;
+    margin-left: 2px;
+    margin-right: 4px;
+}
+
+/* Bluetooth */
+#bluetooth {
+    font-weight: bold;
+    color: @text;
+    margin-left: 2px;
+    margin-right: 4px;
+}
+
+/* Sound Title */
+#wireplumber {
+    font-weight: bold;
+    color: @text;
+    margin-left: 2px;
+    margin-right: 4px;
+}
+
+/* Backlight Styling */
+#backlight {
+    font-weight: bold;
+    color: @text;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+/* Network Styling */
+#network {
+    font-weight: bold;
+    color: @text;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+#network.disconnected {
+    font-weight: bold;
+    color: @urgent;
+}
+
+/* Battery Styling */
+#battery {
+    font-weight: bold;
+    color: @text;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+#battery.icon {
+    font-size: 16px;
+    color: @color-1;
+}
+#battery.charging, #battery.plugged {
+    color: @color-2;
+}
+@keyframes blink {
+    to {
+        background-color: @bg-3;
+        color: @text;
+    }
+}
+#battery.critical:not(.charging) {
+    background-color: @bg-3;
+    color: @urgent;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Clock Styling */
+#clock {
+    font-weight: bold;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+/* Power Menu Styling */
+#custom-power {
+    font-weight: bold;
+    color: @text;
+    margin-left: 2px;
+    margin-right: 4px;
+}
+
+/* Group Styling */
+#rightbar {
+    font-weight: bold;
+    background-color: @bg-2;
+    border-radius: 10px;
+    border: 2px solid @color-3;
+    color: @text;
+    margin-left: 2px;
+    margin-right: 4px;
+}

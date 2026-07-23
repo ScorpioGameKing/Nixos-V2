@@ -1,0 +1,13 @@
+#window {
+    font-weight: bold;
+    font-family: "Agave Nerd Font Mono";
+}
+window#waybar {
+    background-color: @bg-1;
+    color: @text;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+window#waybar.hidden {
+    opacity: 0.2;
+}

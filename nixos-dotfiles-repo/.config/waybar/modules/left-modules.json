@@ -1,0 +1,28 @@
+{
+    "custom/arch": {
+        "format": " 󰣇 ",
+        "tooltip": false,
+        "on-click": "fuzzel"
+    },
+
+    "custom/waypaper": {
+        "format": " 󰸉 ",
+        "tooltip": false,
+        "on-click": "waypaper"
+    },
+
+    "niri/workspaces": {
+        "warp-on-scroll": false,
+        "disable-scroll-wraparound": true,
+        "active-only": true,
+        "format": "{icon}",
+        "format-icons": {
+            "main": " ",
+            "terminals": " ",
+            "browsers": "󰖟 ",
+            "chat": "󱋊 ",
+            "default": "󱈹 "
+        },
+        "on-click": "activate" 
+    }
+}

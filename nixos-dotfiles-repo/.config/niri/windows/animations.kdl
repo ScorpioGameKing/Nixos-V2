@@ -1,0 +1,27 @@
+//----------------------------------------------
+// Animation Shard
+//----------------------------------------------
+
+animations {
+    slowdown 0.5
+
+    window-open {
+        duration-ms 300
+        curve "cubic-bezier" 1 0.75 0.5 1
+    }
+
+    window-close {
+        duration-ms 300
+        curve "cubic-bezier" 1 0.75 0.5 1
+    }
+
+    window-movement {
+        duration-ms 400
+        curve "cubic-bezier" 1 0.75 0.5 1
+    }
+
+    workspace-switch {
+        duration-ms 200
+        curve "cubic-bezier" 1 0.75 0.5 1
+    }
+}

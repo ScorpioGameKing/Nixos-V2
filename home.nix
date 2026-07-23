@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 let
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
-  dotfiles = "${config.home.homeDirectory}/repos/nixos-configs/dotfiles/nixos-dotfiles-repo";
+  dotfiles = "${config.home.homeDirectory}/repos/nixos-configs/nixos-dotfiles-repo";
   configs = {
     fastfetch = "fastfetch";
     fuzzel = "fuzzel";
@@ -102,8 +102,12 @@ in
 
   services.mako.enable = true;
   services.swayidle.enable = true;
-  services.polkit-gnome.enable = true;
-
+  #services.polkit-gnome.enable = true;
+  programs.gpg.enable = true;
+    services.gpg-agent = {
+      enable = true;
+      pinentryPackage = pkgs.pinentry-all;
+    };
   home.packages = with pkgs; [
     swaybg
     waypaper
@@ -118,7 +122,7 @@ in
     configs;
   home.file = {
     "Pictures/wallpapers" = {
-      source = create_symlink "${dotfiles}/gruvbox-wallpapers/wallpapers";
+      source = create_symlink "${dotfiles}/wallpapers";
       recursive = true;
     };
   };

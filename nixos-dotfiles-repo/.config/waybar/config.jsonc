@@ -1,0 +1,21 @@
+{
+    "layer": "top",
+    "height": "32",
+    "spacing": "8",
+    "include": [
+        "~/.config/waybar/modules/left-modules.json",
+        "~/.config/waybar/modules/center-modules.json",
+        "~/.config/waybar/modules/right-modules.json",
+        "~/.config/waybar/modules/decorations.json",
+        "~/.config/waybar/modules/groups.json"
+    ],
+    "modules-left": [
+        "group/leftbar"
+    ],
+    "modules-center": [
+        "group/centerbar"
+    ],
+    "modules-right": [
+        "group/rightbar"
+    ]
+}

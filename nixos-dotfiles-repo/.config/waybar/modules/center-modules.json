@@ -1,0 +1,5 @@
+{
+    "sway/window": {
+        "max-length": 50
+    }
+}

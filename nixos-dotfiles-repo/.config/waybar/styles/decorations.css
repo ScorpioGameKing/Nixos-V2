@@ -1,0 +1,28 @@
+/* Decoration Styling */
+
+#custom-open {
+    font-size: 18px;
+    font-weight: bold;
+    color: @text;
+    margin-top: 2px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#custom-close {
+    font-size: 18px;
+    font-weight: bold;
+    color: @text;
+    margin-top: 2px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#custom-split {
+    font-size: 18px;
+    font-weight: bold;
+    color: @text;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+}

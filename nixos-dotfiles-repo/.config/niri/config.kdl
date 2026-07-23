@@ -1,0 +1,19 @@
+//----------------------------------------------
+// Scorpio's Sharded Niri Configuration
+//----------------------------------------------
+
+// Create Named Workspaces for Rules
+workspace "main"
+workspace "terminals"
+workspace "browsers"
+workspace "chat"
+
+// Include Inital Shards
+include "controls/input.kdl"
+include "windows/display.kdl"
+include "windows/layout.kdl"
+include "misc/on-start.kdl"
+include "windows/animations.kdl"
+include "misc/settings.kdl"
+include "windows/window-rules.kdl"
+include "controls/binds.kdl"

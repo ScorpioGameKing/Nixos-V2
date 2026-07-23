@@ -1,0 +1,56 @@
+//----------------------------------------------
+// System Layout Shard
+//----------------------------------------------
+
+layout {
+    // Set gaps around windows in logical pixels.
+    gaps 12
+
+    center-focused-column "never"
+    always-center-single-column
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        // Uncomment this line to disable the focus ring.
+        off
+
+        width 2
+        active-color "#458588"
+        inactive-color "#fb4934"
+    }
+
+    border {
+        // If you enable the border, you probably want to disable the focus ring.
+        on
+
+        width 3
+        active-color "#458588"
+        inactive-color "#d5c4a1"
+        urgent-color "#fb4934"
+    }
+
+    shadow {
+        // Uncomment the next line to enable shadows.
+        on
+
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#282828"
+    }
+
+    struts {
+        left 2
+        right 2
+        top 8
+        bottom 8
+    }
+
+}

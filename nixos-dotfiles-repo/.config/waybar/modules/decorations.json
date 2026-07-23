@@ -1,0 +1,16 @@
+{
+    "custom/open": {
+        "format": "(",
+        "tooltip": false
+    },
+
+    "custom/close": {
+        "format": ")",
+        "tooltip": false
+    },
+
+    "custom/split": {
+        "format": "|",
+        "tooltip": false
+    }
+}

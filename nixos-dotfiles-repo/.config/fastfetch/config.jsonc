@@ -1,0 +1,138 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+  	"source": "~/.config/fastfetch/ascii/izzet_logo.txt",
+  	"type": "file",
+  	"color": {
+  		"1": "#FB4934",
+  		"2": "#83A598",
+  		"3": "#FB4934",
+  		"4": "#FB4934",
+  	}
+  },
+  "display": {
+       "separator": ": "
+   },
+  "modules": [
+  	{
+  		"type": "custom",
+  		"format": "{##83A598}┏━━━━━━━━━━━━━━━━━━━━━━"
+  	},
+  	{
+  		"type": "custom",
+  		"format": "{##83A598}┃{##FB4934} GENERAL"
+  	},
+  	{
+  		"type": "custom",
+  		"format": "{##83A598}┣╾╼╾╼╾╼╾╼╾╼"
+  	},
+  	{
+  		"type": "title",
+  		"key": "{##83A598}┃ {##B8BB26} {##D79921}USER"
+  	},
+  	{
+    	"type": "uptime",
+    	"key": "{##83A598}┃ {##B8BB26} {##D79921}UPTIME"
+  	},
+  	{
+		"type": "datetime",
+		"key": "{##83A598}┃ {##B8BB26} {##D79921}DATE"
+	},
+	{
+  		"type": "custom",
+  		"format": "{##83A598}┣━━━━━━━━━━━━━━━━━━"
+  	},
+	{
+  		"type": "custom",
+  		"format": "{##83A598}┃{##FB4934} SYSTEM"
+  	},
+  	{
+  		"type": "custom",
+  		"format": "{##83A598}┣╾╼╾╼╾╼╾╼╾╼"
+  	},
+  	{
+    	"type": "os",
+    	"key": "{##83A598}┃ {##B8BB26} {##D79921}OS"
+  	},
+  	{
+    	"type": "kernel",
+    	"key": "{##83A598}┃ {##B8BB26}󰣇 {##D79921}KERNEL"
+ 	},
+ 	{
+    	"type": "shell",
+    	"key": "{##83A598}┃ {##B8BB26} {##D79921}SHELL"
+ 	},
+ 	{
+    	"type": "wm",
+    	"key": "{##83A598}┃ {##B8BB26} {##D79921}DESKTOP"
+ 	},
+ 	{
+    	"type": "terminal",
+    	"key": "{##83A598}┃ {##B8BB26} {##D79921}TERMINAL"
+ 	},
+	{
+  		"type": "custom",
+  		"format": "{##83A598}┣━━━━━━━━━━━━━━━━━━"
+  	},
+	{
+  		"type": "custom",
+  		"format": "{##83A598}┃{##FB4934} HARDWARE"
+  	},
+  	{
+  		"type": "custom",
+  		"format": "{##83A598}┣╾╼╾╼╾╼╾╼╾╼"
+  	},
+  	{
+    	"type": "cpu",
+    	"key": "{##83A598}┃ {##B8BB26} {##D79921}CPU"  		
+  	},
+  	{
+    	"type": "gpu",
+    	"key": "{##83A598}┃ {##B8BB26}󰔃 {##D79921}GPU"
+  	},
+  	{
+    	"type": "memory",
+    	"key": "{##83A598}┃ {##B8BB26} {##D79921}RAM"
+  	},
+  	{
+    	"type": "disk",
+    	"key": "{##83A598}┃ {##B8BB26}󰋊 {##D79921}DISK"
+  	},
+  	{
+  		"type": "custom",
+  		"format": "{##83A598}┣━━━━━━━━━━━━━━━━━━"
+  	},
+  	{
+  		"type": "custom",
+  		"format": "{##83A598}┃{##FB4934} DETAILS"
+  	},
+  	{
+  		"type": "custom",
+  		"format": "{##83A598}┣╾╼╾╼╾╼╾╼╾╼"
+  	},
+  	{
+    	"type": "packages",
+    	"key": "{##83A598}┃ {##B8BB26} {##D79921}PACKAGES"  		
+  	},
+  	{
+    	"type": "display",
+    	"key": "{##83A598}┃ {##B8BB26} {##D79921}DISPLAYS"
+  	},
+  	{
+    	"type": "theme",
+    	"key": "{##83A598}┃ {##B8BB26} {##D79921}THEME"
+  	},
+  	{
+    	"type": "terminalfont",
+    	"key": "{##83A598}┃ {##B8BB26} {##D79921}FONT"
+  	},
+  	{
+    	"type": "cursor",
+    	"key": "{##83A598}┃ {##B8BB26}󰇀 {##D79921}CURSOR"
+  	},
+  	{
+  		"type": "custom",
+  		"format": "{##83A598}┗━━━━━━━━━━━━━━━━━━━━━━"
+  	},
+  ]
+}

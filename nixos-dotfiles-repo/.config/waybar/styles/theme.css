@@ -1,0 +1,12 @@
+/* Define Our Colors */
+@define-color bg-1 transparent;
+@define-color bg-2 #282828;
+@define-color bg-3 #928374;
+@define-color text #d5c4a1;
+@define-color borders #458588;
+@define-color focus-1 #689d6a;
+@define-color focus-2 #b16286;
+@define-color color-1 #cc241d;
+@define-color color-2 #98971a;
+@define-color color-3 #458588;
+@define-color urgent #fb4934;

@@ -1,0 +1,90 @@
+//----------------------------------------------
+// Window Rules Shard
+//----------------------------------------------
+
+// Transparency and Rounding For All
+window-rule {
+    opacity 0.90
+    draw-border-with-background false
+    geometry-corner-radius 14
+    clip-to-geometry true
+}
+
+// Work around WezTerm's initial configure bug
+// by setting an empty default-column-width.
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+// Disable Screencap on certain Password Managers
+window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    block-out-from "screen-capture"
+}
+
+// Open Everything on Main
+window-rule {
+    open-on-workspace "main"
+    open-focused true
+}
+
+// Open Web Browsers on Browser Space
+window-rule {
+    match app-id=r#"brave\-browser"#
+    open-on-workspace "browsers"
+    open-focused true
+    open-maximized true
+    opacity 1.0
+}
+
+// Open Terminals, Yazi, etc Terminal Apps on Terminal Space
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"# 
+    open-on-workspace "terminals"
+    open-focused true
+}
+
+// Open Discord on chat
+window-rule {
+    match app-id=r#"equibop"#
+    open-on-workspace "chat"
+    open-focused true
+    open-maximized true
+}
+
+// Opacity rules for games and such
+window-rule {
+    match app-id="HytaleClient"
+    opacity 1.0
+}
+
+window-rule {
+    match app-id="LogicWorld Mod Editor"
+    opacity 1.0
+}
+
+window-rule {
+    match app-id="openmw"
+    opacity 1.0
+}
+
+window-rule {
+    match app-id=r#"steam_app_.*"#
+    opacity 1.0
+}
+
+// Wallpaper tweaks
+layer-rule {
+    match namespace="wallpaper"
+    place-within-backdrop true
+}
+layout {
+    background-color "transparent"
+}
+overview {
+    workspace-shadow {
+        off
+    }
+}

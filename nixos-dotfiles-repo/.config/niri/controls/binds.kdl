@@ -1,0 +1,170 @@
+//----------------------------------------------
+// Keybind Shard
+//----------------------------------------------
+
+recent-windows { 
+    binds {
+        
+    } 
+}
+
+binds {
+    
+    // Pull up overlay
+    Mod+Shift+Slash hotkey-overlay-title=null { show-hotkey-overlay; }
+
+    // Aplication Bindings
+    Mod+Return  hotkey-overlay-title="<span font='Agave Nerd Font Mono' size='14pt' foreground='#fabd2f'><b>Open Terminal</b></span><span font='Agave Nerd Font Mono' size='14pt'>:</span> <span font='Agave Nerd Font Mono' size='14pt' foreground='#83a598'>Wezterm</span>"   { spawn "wezterm"; }
+    Mod+Y       hotkey-overlay-title="<span font='Agave Nerd Font Mono' size='14pt' foreground='#fabd2f'><b>Open File Manager</b></span><span font='Agave Nerd Font Mono' size='14pt'>:</span> <span font='Agave Nerd Font Mono' size='14pt' foreground='#83a598'>Yazi</span>"    { spawn "wezterm" "-e" "yazi"; }
+    Mod+E       hotkey-overlay-title="<span font='Agave Nerd Font Mono' size='14pt' foreground='#fabd2f'><b>Open Chat App</b></span><span font='Agave Nerd Font Mono' size='14pt'>:</span> <span font='Agave Nerd Font Mono' size='14pt' foreground='#83a598'>Equibop</span>" { spawn "equibop"; }
+    Mod+B       hotkey-overlay-title="<span font='Agave Nerd Font Mono' size='14pt' foreground='#fabd2f'><b>Open Browser</b></span><span font='Agave Nerd Font Mono' size='14pt'>:</span> <span font='Agave Nerd Font Mono' size='14pt' foreground='#83a598'>Brave</span>"    { spawn "brave"; }
+    Mod+Space   hotkey-overlay-title="<span font='Agave Nerd Font Mono' size='14pt' foreground='#fabd2f'><b>Run  Application</b></span><span font='Agave Nerd Font Mono' size='14pt'>:</span> <span font='Agave Nerd Font Mono' size='14pt' foreground='#83a598'>fuzzel</span>" { spawn "fuzzel"; }
+    Super+Alt+L hotkey-overlay-title="<span font='Agave Nerd Font Mono' size='14pt' foreground='#fb4934'><b>Lock Screen</b></span><span font='Agave Nerd Font Mono' size='14pt'>:</span> <span font='Agave Nerd Font Mono' size='14pt' foreground='#83a598'>swaylock</span>"  { spawn "sh" "-c" "~/.config/niri/scripts/screenlock.sh"; }
+
+    // Example volume keys mappings for PipeWire & WirePlumber.
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+
+    // Example media keys mapping using playerctl.
+    XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
+    XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
+    XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
+
+    // Example brightness key mappings for brightnessctl.
+    XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+
+    // Open/close the Overview: a zoomed-out view of workspaces and windows.
+    Mod+G repeat=false hotkey-overlay-title="<span font='Agave Nerd Font Mono' size='14pt' foreground='#8ec07c'><b>Toggle</b></span><span font='Agave Nerd Font Mono' size='14pt'>:</span> <span font='Agave Nerd Font Mono' size='14pt' foreground='#83a598'>Overview</span>" { toggle-overview; }
+
+    // Kill window
+    Mod+Q repeat=false hotkey-overlay-title="<span font='Agave Nerd Font Mono' size='14pt' foreground='#fb4934'><b>Kill</b></span><span font='Agave Nerd Font Mono' size='14pt'>:</span> <span font='Agave Nerd Font Mono' size='14pt' foreground='#83a598'>Focused Window</span>" { close-window; }
+
+    // Move Focus
+    // Mod+Left  hotkey-overlay-title=null { focus-column-left; }
+    // Mod+Down  hotkey-overlay-title=null { focus-window-down; }
+    // Mod+Up    hotkey-overlay-title=null { focus-window-up; }
+    // Mod+Right hotkey-overlay-title=null { focus-column-right; }
+    Mod+H     hotkey-overlay-title=null { focus-column-left; }
+    Mod+J     hotkey-overlay-title=null { focus-workspace-up; }
+    Mod+K     hotkey-overlay-title=null { focus-workspace-down; }
+    Mod+L     hotkey-overlay-title=null { focus-column-right; }
+
+    // Move Columns
+    // Mod+Ctrl+Left  hotkey-overlay-title=null { move-column-left; }
+    // Mod+Ctrl+Down  hotkey-overlay-title=null { move-window-down; }
+    // Mod+Ctrl+Up    hotkey-overlay-title=null { move-window-up; }
+    // Mod+Ctrl+Right hotkey-overlay-title=null { move-column-right; }
+    Mod+Ctrl+H     hotkey-overlay-title=null { move-column-left; }
+    Mod+Ctrl+J     hotkey-overlay-title=null { move-window-down; }
+    Mod+Ctrl+K     hotkey-overlay-title=null { move-window-up; }
+    Mod+Ctrl+L     hotkey-overlay-title=null { move-column-right; }
+
+    // Hop to Ends
+    Mod+Home      hotkey-overlay-title=null { focus-column-first; }
+    Mod+End       hotkey-overlay-title=null { focus-column-last; }
+    Mod+Ctrl+Home hotkey-overlay-title=null { move-column-to-first; }
+    Mod+Ctrl+End  hotkey-overlay-title=null { move-column-to-last; }
+
+    // Change and move Columns through workspaces
+    //Mod+Page_Down      hotkey-overlay-title=null { focus-workspace-down; }
+    //Mod+Page_Up        hotkey-overlay-title=null { focus-workspace-up; }
+    //Mod+U              hotkey-overlay-title=null { focus-workspace-down; }
+    //Mod+I              hotkey-overlay-title=null { focus-workspace-up; }
+    //Mod+Ctrl+Page_Down hotkey-overlay-title=null { move-column-to-workspace-down; }
+    //Mod+Ctrl+Page_Up   hotkey-overlay-title=null { move-column-to-workspace-up; }
+    //Mod+Ctrl+U         hotkey-overlay-title=null { move-column-to-workspace-down; }
+    //Mod+Ctrl+I         hotkey-overlay-title=null { move-column-to-workspace-up; }
+
+    // Move Workspaces
+    //Mod+Shift+Page_Down hotkey-overlay-title=null { move-workspace-down; }
+    //Mod+Shift+Page_Up   hotkey-overlay-title=null { move-workspace-up; }
+    //Mod+Shift+U         hotkey-overlay-title=null { move-workspace-down; }
+    //Mod+Shift+I         hotkey-overlay-title=null { move-workspace-up; }
+
+    // Quick Choose and Move to Workspace
+    Mod+U            hotkey-overlay-title=null { focus-workspace 1; }
+    Mod+I            hotkey-overlay-title=null { focus-workspace 2; }
+    Mod+O            hotkey-overlay-title=null { focus-workspace 3; }
+    Mod+P            hotkey-overlay-title=null { focus-workspace 4; }
+    Mod+Shift+U      hotkey-overlay-title=null { focus-workspace 5; }
+    Mod+Shift+I      hotkey-overlay-title=null { focus-workspace 6; }
+    Mod+Shift+O      hotkey-overlay-title=null { focus-workspace 7; }
+    Mod+Shift+P      hotkey-overlay-title=null { focus-workspace 8; }
+    Mod+Ctrl+U       hotkey-overlay-title=null { move-column-to-workspace 1; }
+    Mod+Ctrl+I       hotkey-overlay-title=null { move-column-to-workspace 2; }
+    Mod+Ctrl+O       hotkey-overlay-title=null { move-column-to-workspace 3; }
+    Mod+Ctrl+P       hotkey-overlay-title=null { move-column-to-workspace 4; }
+    Mod+Shift+Ctrl+U hotkey-overlay-title=null { move-column-to-workspace 5; }
+    Mod+Shift+Ctrl+I hotkey-overlay-title=null { move-column-to-workspace 6; }
+    Mod+Shift+Ctrl+O hotkey-overlay-title=null { move-column-to-workspace 7; }
+    Mod+Shift+Ctrl+P hotkey-overlay-title=null { move-column-to-workspace 8; }
+    // Mod+9      hotkey-overlay-title=null { focus-workspace 9; }
+    // Mod+Ctrl+9 hotkey-overlay-title=null { move-column-to-workspace 9; }
+
+    // Switches focus between the current and the previous workspace.
+    Mod+Tab hotkey-overlay-title=null { focus-workspace-previous; }
+
+    // Move the focused window in and out of a column.
+    // Mod+W hotkey-overlay-title="<span font='Agave Nerd Font Mono' size='14pt' foreground='#8ec07c'><b>Stacks</b></span><span font='Agave Nerd Font Mono' size='14pt'>:</span> <span font='Agave Nerd Font Mono' size='14pt' foreground='#83a598'>Create Stack</span>" { toggle-column-tabbed-display; }
+    // Mod+BracketLeft  hotkey-overlay-title="<span font='Agave Nerd Font Mono' size='14pt' foreground='#8ec07c'><b>Stacks</b></span><span font='Agave Nerd Font Mono' size='14pt'>:</span> <span font='Agave Nerd Font Mono' size='14pt' foreground='#83a598'>Consume/Expel Left</span>" { consume-or-expel-window-left; }
+    // Mod+BracketRight hotkey-overlay-title="<span font='Agave Nerd Font Mono' size='14pt' foreground='#8ec07c'><b>Stacks</b></span><span font='Agave Nerd Font Mono' size='14pt'>:</span> <span font='Agave Nerd Font Mono' size='14pt' foreground='#83a598'> Consume/Expel Right</span>" { consume-or-expel-window-right; }
+
+    // Cycle Widths and Heights
+    Mod+R       hotkey-overlay-title=null { switch-preset-column-width; }
+    Mod+Shift+R hotkey-overlay-title=null { switch-preset-window-height; }
+    Mod+Ctrl+R  hotkey-overlay-title=null { reset-window-height; }
+    Mod+F       hotkey-overlay-title=null { maximize-column; }
+    Mod+Shift+F hotkey-overlay-title=null { fullscreen-window; }
+
+    // Makes the column "fill the rest of the space".
+    Mod+Ctrl+F hotkey-overlay-title=null { expand-column-to-available-width; }
+
+    // Center Focused Column
+    Mod+C hotkey-overlay-title=null { center-column; }
+
+    // Center all fully visible columns on screen.
+    Mod+Ctrl+C hotkey-overlay-title=null { center-visible-columns; }
+
+    // Finer width adjustments.
+    Mod+Minus hotkey-overlay-title=null { set-column-width "-10%"; }
+    Mod+Equal hotkey-overlay-title=null { set-column-width "+10%"; }
+
+    // Finer height adjustments when in column with other windows.
+    Mod+Shift+Minus hotkey-overlay-title=null { set-window-height "-10%"; }
+    Mod+Shift+Equal hotkey-overlay-title=null { set-window-height "+10%"; }
+
+    // Move the focused window between the floating and the tiling layout.
+    Mod+V       hotkey-overlay-title=null { toggle-window-floating; }
+    Mod+Shift+V hotkey-overlay-title=null { switch-focus-between-floating-and-tiling; }
+
+
+    // Screenshots
+    Mod+S      hotkey-overlay-title=null { screenshot; }
+    Mod+Ctrl+S hotkey-overlay-title=null { screenshot-screen; }
+    Mod+Alt+S  hotkey-overlay-title=null { screenshot-window; }
+    
+    // Applications such as remote-desktop clients and software KVM switches may
+    // request that niri stops processing the keyboard shortcuts defined here
+    // so they may, for example, forward the key presses as-is to a remote machine.
+    // It's a good idea to bind an escape hatch to toggle the inhibitor,
+    Mod+Escape allow-inhibiting=false hotkey-overlay-title=null { toggle-keyboard-shortcuts-inhibit; }
+
+    // The quit action will show a confirmation dialog to avoid accidental exits.
+    //Mod+Shift+E     hotkey-overlay-title="<span font='Agave Nerd Font Mono' size='14pt' foreground='#fb4934'><b>Quit</b></span><span font='Agave Nerd Font Mono' size='14pt'>:</span> <span font='Agave Nerd Font Mono' size='14pt' foreground='#83a598'>Niri</span>" { quit; }
+    Ctrl+Alt+Delete hotkey-overlay-title="<span font='Agave Nerd Font Mono' size='14pt' foreground='#fb4934'><b>Quit</b></span><span font='Agave Nerd Font Mono' size='14pt'>:</span> <span font='Agave Nerd Font Mono' size='14pt' foreground='#83a598'>Niri</span>" { quit; }
+    // Powers off the monitors. To turn them back on, do any input like
+    // moving the mouse or pressing any other key.
+    //Mod+Shift+P hotkey-overlay-title=null { power-off-monitors; }
+
+    //Mod+Shift+Ctrl+Left { move-window-to-monitor-left; }
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
