@@ -113,6 +113,11 @@
           yaml.enable = true;
         };
 
+        treesitter = {
+          enable = true;
+          fold = true;
+        };
+
         terminal = {
           toggleterm = {
             enable = true;
