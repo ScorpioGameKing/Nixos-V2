@@ -75,6 +75,11 @@
       vim = {
         viAlias = true;
         vimAlias = true;
+        
+        options = {
+          tabstop = 2;
+          shiftwidth = 2;
+        };
 
         statusline.lualine.enable = true;
         telescope.enable = true;
@@ -84,9 +89,11 @@
         lsp.enable = true;
         languages = {
           enableTreesitter = true;
+          lua.enable = true;
           nix.enable = true;
           python.enable = true;
         };
+
       };
     };
   };
