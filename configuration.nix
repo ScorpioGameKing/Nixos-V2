@@ -94,14 +94,14 @@
         autocomplete.nvim-cmp.enable = true;
         binds.cheatsheet.enable = true;
 
-        keymaps = {
+        keymaps = [
           {
             key = "jk";
             mode = "i";
             silent = true;
             action = "<Esc>";
           }
-        };
+        ];
 
         lsp = {
           enable = true;
