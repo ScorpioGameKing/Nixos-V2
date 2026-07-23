@@ -1,7 +1,7 @@
-{ pkgs, ... }: {
-  imports = [ 
-      ./hardware-configuration.nix
-    ];
+{ lib, pkgs, ... }: {
+  imports = [
+    ./hardware-configuration.nix
+  ];
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -75,7 +75,7 @@
       vim = {
         viAlias = true;
         vimAlias = true;
-        
+
         theme = {
           enable = true;
           name = "gruvbox";
@@ -102,6 +102,30 @@
             mode = "n";
             silent = true;
             action = "<cmd>Telescope keymaps<CR>";
+          }
+
+          # Clear Highlights
+          {
+            key = "<leader>ch";
+            mode = "n";
+            silent = true;
+            action = "<cmd>noh<CR>";
+          }
+
+          # Better Search & Replace
+          {
+            key = "<leader>s";
+            mode = "n";
+            silent = true;
+            action = "[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]";
+          }
+
+          # Make Shell Script Executable
+          {
+            key = "<leader>x";
+            mode = "n";
+            silent = true;
+            action = "<cmd>!chmod +x %<CR>";
           }
 
           # Keep things centered while moving x4
@@ -160,12 +184,19 @@
         ];
 
         autocmds = [
-          
+
           {
-            event = [ "CursorMoved" ];
-            pattern = [ "*" ];
-            desc = "Auto clear search highlights";
-            command = "noh";
+            event = [ "BufWinLeave" ];
+            pattern = [ "*.*" ];
+            desc = "Save view when closing";
+            command = "mkview";
+          }
+
+          {
+            event = [ "BufWinEnter" ];
+            pattern = [ "*.*" ];
+            desc = "Load view when opening";
+            command = "silent! loadview";
           }
 
         ];
@@ -212,7 +243,7 @@
           };
         };
 
-        luaConfigPost = ''
+        luaConfigPost = lib.mkLuaInline ''
           vim.hlsearch = false
           vim.incsearch = true
           vim.opt.scrolloff = 8
@@ -224,7 +255,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    vim 
+    vim
     wget
     brightnessctl
   ];
@@ -233,9 +264,11 @@
     nerd-fonts.agave
   ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "26.05";
 }
-
