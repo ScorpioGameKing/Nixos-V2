@@ -78,6 +78,12 @@
       vim = {
         viAlias = true;
         vimAlias = true;
+        
+        theme = {
+          enable = true;
+          name = "gruvbox";
+          style = "dark";
+        };
 
         options = {
           tabstop = 2;
