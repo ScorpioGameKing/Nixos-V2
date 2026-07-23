@@ -21,7 +21,7 @@ in
   home.stateVersion = "26.05";
 
   stylix.targets = {
-    neovim.enable = false;
+    nvf.enable = false;
     swaylock.enable = false;
     yazi.enable = false;
     waybar.enable = false;
