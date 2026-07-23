@@ -72,10 +72,23 @@
   programs.nvf = {
     enable = true;
     settings = {
-      vim.viAlias = true;
-      vim.vimAlias = true;
-      vim.lsp = {
-        enable = true;
+      vim = {
+        viAlias = true;
+        vimAlias = true;
+        theme = {
+          enable = true;
+          name = "gruvbox";
+          style = "dark";
+        };
+        statusline.lualine.enable = true;
+        telescope.enable = true;
+        autocomplete.nvim-cmp.enable = true;
+        languages = {
+          enableTreesitter = true;
+          nix.enable = true;
+          python.enable = true;
+        };
+        lsp.enable = true;
       };
     };
   };
