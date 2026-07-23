@@ -95,12 +95,68 @@
         binds.cheatsheet.enable = true;
 
         keymaps = [
+
+          # Quick Open keymaps
+          {
+            key = "<leader>km";
+            mode = "n";
+            silent = true;
+            action = "<cmd>Telescope keymaps";
+          }
+
+          # Keep things centered while moving x4
+          {
+            key = "<C-d>";
+            mode = "n";
+            silent = true;
+            action = "<C-d>zz";
+          }
+
+          {
+            key = "<C-u>";
+            mode = "n";
+            silent = true;
+            action = "<C-u>zz";
+          }
+
+          {
+            key = "n";
+            mode = "n";
+            silent = true;
+            action = "nzzzv";
+          }
+
+          {
+            key = "N";
+            mode = "n";
+            silent = true;
+            action = "Nzzzv";
+          }
+
+          # Visual Group Down
+          {
+            key = "J";
+            mode = "v";
+            silent = true;
+            action = "m: '>+1<CR>gv=gv";
+          }
+
+          # Visual Group Up
+          {
+            key = "K";
+            mode = "v";
+            silent = true;
+            action = "m: '<-2<CR>gv=gv";
+          }
+
+          # Quick Escape
           {
             key = "jk";
             mode = "i";
             silent = true;
             action = "<Esc>";
           }
+
         ];
 
         lsp = {
