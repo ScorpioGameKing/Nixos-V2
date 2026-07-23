@@ -101,7 +101,7 @@
             key = "<leader>km";
             mode = "n";
             silent = true;
-            action = "<cmd>Telescope keymaps";
+            action = "<cmd>Telescope keymaps<CR>";
           }
 
           # Keep things centered while moving x4
