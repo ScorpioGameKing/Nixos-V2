@@ -75,9 +75,12 @@
       vim = {
         viAlias = true;
         vimAlias = true;
+
         statusline.lualine.enable = true;
         telescope.enable = true;
         autocomplete.nvim-cmp.enable = true;
+        binds.cheatsheet.enable = true;
+
         lsp.enable = true;
         languages = {
           enableTreesitter = true;
