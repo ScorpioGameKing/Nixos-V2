@@ -75,10 +75,15 @@
       vim = {
         viAlias = true;
         vimAlias = true;
+
+        ui = {
+          smartcolumn.enable = true;
+        };
         
         options = {
           tabstop = 2;
           shiftwidth = 2;
+          wrap = false;
         };
 
         statusline.lualine.enable = true;
