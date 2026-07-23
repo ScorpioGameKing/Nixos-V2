@@ -162,7 +162,7 @@
             key = "J";
             mode = "v";
             silent = true;
-            action = "m: '>+1<CR>gv=gv";
+            action = ":m '>+1<CR>gv=gv";
           }
 
           # Visual Group Up
@@ -170,7 +170,7 @@
             key = "K";
             mode = "v";
             silent = true;
-            action = "m: '<-2<CR>gv=gv";
+            action = ":m '<-2<CR>gv=gv";
           }
 
           # Quick Escape
