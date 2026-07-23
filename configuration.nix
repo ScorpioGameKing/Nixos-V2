@@ -94,6 +94,15 @@
         autocomplete.nvim-cmp.enable = true;
         binds.cheatsheet.enable = true;
 
+        keymaps = {
+          {
+            key = "jk";
+            mode = "i";
+            silent = true;
+            action = "<Esc>";
+          }
+        };
+
         lsp = {
           enable = true;
           servers.nixd.settings.nil.nix.autoArchive = true;
@@ -128,7 +137,12 @@
         utility = {
           smart-splits.enable = true;
           undotree.enable = true;
-          yazi-nvim.enable = true;
+          yazi-nvim = {
+            enable = true;
+            mappings = {
+              openYaziDir = "<leader>lk";
+            };
+          };
         };
 
         luaConfigPost = ''
