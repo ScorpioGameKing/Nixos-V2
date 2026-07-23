@@ -1,7 +1,11 @@
-{ pkgs, ... }: {
+{ pkgs, ... }: 
+
+{
+  
   imports = [
     ./hardware-configuration.nix
   ];
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -25,6 +29,7 @@
   };
 
   services.libinput.enable = true;
+
   services.displayManager.ly = {
     enable = true;
     settings = {
@@ -57,6 +62,7 @@
   programs.niri.enable = true;
 
   programs.gamemode.enable = true;
+
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
@@ -266,6 +272,7 @@
     "nix-command"
     "flakes"
   ];
+
   nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "26.05";
