@@ -77,7 +77,6 @@
     wget
     brightnessctl
     pavucontrol
-    browsh
   ];
 
   fonts.packages = with pkgs; [

@@ -40,6 +40,7 @@ in
   programs.btop.enable = true;
   programs.brave.enable = true;
   programs.equibop.enable = true;
+  programs.w3m.enable = true;
 
   programs.bash = {
     enable = true;
