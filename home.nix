@@ -89,6 +89,34 @@ in
     useTheme = "gruvbox";
   };
 
+  programs.nom = {
+    enable = true;
+    settings = {
+      database = "main.db";
+      autoRead = true;
+      showRead = true;
+      feeds = [
+        {
+          name = "r/Unixporn";
+          url = "https://www.reddit.com/r/Unixporn/.rss";
+        }
+        {
+          name = "r/Nixos";
+          url = "https://www.reddit.com/r/NixOS/.rss";
+        }
+        {
+          name = "yt/Vimjoyer";
+          url = "https://www.youtube.com/feeds/videos.xml?channel_id=https://www.youtube.com/@vimjoyer";
+        }
+      ];
+      openers = [
+        {
+          cmd = "mpv %s";
+          regeex = "youtube";
+        }
+      ];
+    };
+  };
   programs.yazi.enable = true;
   programs.wezterm.enable = true;
   programs.fuzzel.enable = true;
