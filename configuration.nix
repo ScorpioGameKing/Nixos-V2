@@ -24,10 +24,10 @@
   };
 
   hardware.pulseaudio.enable = true;
-  #services.pipewire = {
-  #  enable = true;
+  services.pipewire = {
+    enable = false;
   #  pulse.enable = true;
-  #};
+  };
 
   services.libinput.enable = true;
 
