@@ -156,6 +156,7 @@ in
     swaybg
     waypaper
     xwayland-satellite
+    browsh
   ];
 
   xdg.configFile = builtins.mapAttrs
