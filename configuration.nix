@@ -100,16 +100,13 @@
       binds.cheatsheet.enable = true;
       #formatter.conform-nvim.enable = true;
 
-      debugger = {
-        nvim-dap.enable = true;
-        nvim-dap.ui.enable = true;
-      };
+      # debugger = {
+      #   nvim-dap.enable = true;
+      #   nvim-dap.ui.enable = true;
+      # };
 
       minimap.codewindow = {
         enable = true;
-        setupOpts = {
-          auto_enable = false;
-        };
       };
 
       keymaps = [
