@@ -139,7 +139,7 @@ in
   };
 
   services.swayidle.enable = true;
-  services.nm-applet.enable = true;
+  services.network-manager-applet.enable = true;
 
   services.mako = {
     enable = true;
