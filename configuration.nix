@@ -98,15 +98,12 @@
       telescope.enable = true;
       autocomplete.nvim-cmp.enable = true;
       binds.cheatsheet.enable = true;
+      minimap.minimap-nvim.enable;
       #formatter.conform-nvim.enable = true;
 
       # debugger = {
       #   nvim-dap.enable = true;
       #   nvim-dap.ui.enable = true;
-      # };
-
-      # minimap.codewindow = {
-      #   enable = true;
       # };
 
       keymaps = [
