@@ -216,7 +216,7 @@
 
       lsp = {
         enable = true;
-        servers.nixd.settings.nil.nix.autoArchive = true;
+        servers.nil.settings.nil.nix.autoArchive = true;
       };
 
       languages = {

@@ -89,6 +89,23 @@ in
     useTheme = "gruvbox";
   };
 
+  programs.feedr = {
+    enable = true;
+    settings = {
+      general = {
+        auto_refresh_interval = 300;
+        refresh_enabled = true;
+        refresh_rate_limit_delay = 2000;
+      };
+      ui.show_preview = true;
+      default_feeds = [
+        {
+          url = "https://reddit.com/r/unixporn/.rss";
+          category = "Reddit";
+        }
+      ];
+    };
+  };
   programs.yazi.enable = true;
   programs.wezterm.enable = true;
   programs.fuzzel.enable = true;

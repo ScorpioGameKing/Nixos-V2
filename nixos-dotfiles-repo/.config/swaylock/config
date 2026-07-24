@@ -1,6 +1,6 @@
 ignore-empty-password
 daemonize
-image=~/Pictures/wallpapers/brands/nixos.png
+image=~/.local/share/swaylock/lock_screen.png
 disable-caps-lock-text
 indicator-thickness=8
 inside-color=#fe8019
