@@ -99,12 +99,12 @@
       autocomplete.nvim-cmp.enable = true;
       binds.cheatsheet.enable = true;
       minimap.minimap-vim.enable = true;
-      #formatter.conform-nvim.enable = true;
+      formatter.conform-nvim.enable = true;
 
-      # debugger = {
-      #   nvim-dap.enable = true;
-      #   nvim-dap.ui.enable = true;
-      # };
+      debugger = {
+        nvim-dap.enable = true;
+        nvim-dap.ui.enable = true;
+      };
 
       keymaps = [
 
@@ -122,6 +122,14 @@
           mode = "n";
           silent = true;
           action = "<cmd>UndotreeToggle<CR>";
+        }
+
+        # Toggle Minimap
+        {
+          key = "<leader>mm";
+          mode = "n";
+          silent = true;
+          action = "<cmd>MinimapToggle<CR>";
         }
 
         # Clear Highlights
