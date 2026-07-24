@@ -105,9 +105,9 @@
       #   nvim-dap.ui.enable = true;
       # };
 
-      minimap.codewindow = {
-        enable = true;
-      };
+      # minimap.codewindow = {
+      #   enable = true;
+      # };
 
       keymaps = [
 
