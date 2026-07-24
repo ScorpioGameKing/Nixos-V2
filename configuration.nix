@@ -23,10 +23,9 @@
     enable32Bit = true;
   };
 
-  hardware.pulseaudio.enable = true;
   services.pipewire = {
-    enable = false;
-  #  pulse.enable = true;
+    enable = true;
+    pulse.enable = true;
   };
 
   services.libinput.enable = true;
