@@ -112,7 +112,6 @@ in
           name = "yt/Tony_btw";
           url = "https://www.youtube.com/feeds/videos.xml?channel_id=UC65_CVnMw6hvPET_DRDg3GA"; 
         }
-
       ];
       openers = [
         {
@@ -122,6 +121,8 @@ in
       ];
     };
   };
+
+  programs.mpv.enable = true;
   programs.yazi.enable = true;
   programs.wezterm.enable = true;
   programs.fuzzel.enable = true;
