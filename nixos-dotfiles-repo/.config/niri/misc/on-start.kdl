@@ -5,3 +5,4 @@
 spawn-at-startup "waybar"
 //spawn-sh-at-startup "waypaper --restore --random"
 spawn-sh-at-startup "~/.config/niri/scripts/wallpaper-swap-boot.sh"
+spawn-sh-at-startup "~/.config/niri/scripts/wallpaper-swap-boot.sh"
