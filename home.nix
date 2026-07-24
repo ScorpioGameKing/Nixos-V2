@@ -113,10 +113,6 @@ in
       showread = true;
       feeds = [
         {
-          name = "r/Unixporn";
-          url = "https://www.reddit.com/r/Unixporn/.rss";
-        }
-        {
           name = "r/Nixos";
           url = "https://www.reddit.com/r/NixOS/.rss";
         }
