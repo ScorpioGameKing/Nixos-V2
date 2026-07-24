@@ -59,7 +59,7 @@
   };
 
   programs.niri.enable = true;
-
+  programs.nm-applet.enable = true;
   programs.gamemode.enable = true;
 
   programs.steam = {
