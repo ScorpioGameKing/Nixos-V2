@@ -96,14 +96,14 @@ in
       autoread = true;
       showread = true;
       feeds = [
-        # {
-        #   name = "r/Unixporn";
-        #   url = "https://www.reddit.com/r/Unixporn/.rss";
-        # }
-        # {
-        #   name = "r/Nixos";
-        #   url = "https://www.reddit.com/r/NixOS/.rss";
-        # }
+        {
+          name = "r/Unixporn";
+          url = "https://www.reddit.com/r/Unixporn/.rss";
+        }
+        {
+          name = "r/Nixos";
+          url = "https://www.reddit.com/r/NixOS/.rss";
+        }
         {
           name = "yt/Vimjoyer";
           url = "https://www.youtube.com/feeds/videos.xml?channel_id=UC_zBdZ0_H_jn41FDRG7q4Tw";
