@@ -30,6 +30,16 @@ in
 
   programs.ripgrep.enable = true;
   programs.fastfetch.enable = true;
+  programs.gpg.enable = true;
+  programs.mpv.enable = true;
+  programs.yazi.enable = true;
+  programs.wezterm.enable = true;
+  programs.fuzzel.enable = true;
+  programs.swaylock.enable = true;
+  programs.waybar.enable = true;
+  programs.btop.enable = true;
+  programs.brave.enable = true;
+  programs.equibop.enable = true;
 
   programs.bash = {
     enable = true;
@@ -126,22 +136,15 @@ in
     };
   };
 
-  programs.mpv.enable = true;
-  programs.yazi.enable = true;
-  programs.wezterm.enable = true;
-  programs.fuzzel.enable = true;
-  programs.swaylock.enable = true;
-  programs.waybar.enable = true;
-  programs.btop.enable = true;
-
-  programs.brave.enable = true;
-  programs.equibop.enable = true;
-
-  services.mako.enable = true;
   services.swayidle.enable = true;
 
-  programs.gpg.enable = true;
-    services.gpg-agent = {
+  services.mako = {
+    enable = true;
+    settings = {
+      default-timeout = 3000;
+    };
+  };
+  services.gpg-agent = {
       enable = true;
       pinentryPackage = pkgs.pinentry-all;
     };
@@ -158,6 +161,7 @@ in
       recursive = true;
     })
     configs;
+
   home.file = {
     "Pictures/wallpapers" = {
       source = create_symlink "${dotfiles}/wallpapers";
