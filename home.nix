@@ -103,6 +103,10 @@ in
           url = "https://reddit.com/r/unixporn/.rss";
           category = "Reddit";
         }
+        {
+          url = https://www.reddit.com/r/NixOS/.rss;
+          category = "Reddit";
+        }
       ];
     };
   };
