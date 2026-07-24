@@ -249,7 +249,7 @@
       treesitter = {
         enable = true;
         fold = true;
-        context = true;
+        context.enable = true;
       };
 
       terminal = {
