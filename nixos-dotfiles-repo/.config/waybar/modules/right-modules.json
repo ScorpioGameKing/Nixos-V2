@@ -3,19 +3,13 @@
     "icon-size": 14,
     "spacing": 2
   },
-  "wireplumber#source": {
-    "node-type": "Audio/Source",
-    "format": "{volume}% 󰍬",
-    "format-muted": "󰍭",
-    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
-    "scroll-step": 5
-  },
   "wireplumber": {
     "format": "{volume}% {icon}",
     "format-source-muted": " ",
     "format-icons": {
         "default": ["", "", ""]
-    }
+    },
+    "on-click": "pavucontrol"
   },
   "network": {
     "format": "{essid} {signalStrength}%"
