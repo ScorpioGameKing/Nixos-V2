@@ -98,6 +98,19 @@
       telescope.enable = true;
       autocomplete.nvim-cmp.enable = true;
       binds.cheatsheet.enable = true;
+      formatter.conform-nvim.enable = true;
+
+      debugger = {
+        nvim-dap.enable = true;
+        nvim-dap.ui.enable = true;
+      };
+
+      minimap.codewindow = {
+        enable = true;
+        setupOpts = {
+          auto_enable = false;
+        };
+      };
 
       keymaps = [
 
@@ -236,18 +249,23 @@
       treesitter = {
         enable = true;
         fold = true;
+        context = true;
       };
 
       terminal = {
         toggleterm = {
           enable = true;
           lazygit.enable = true;
+          setupOpts = {
+            direction = "float";
+          };
         };
       };
 
       utility = {
         smart-splits.enable = true;
         undotree.enable = true;
+        nix-develop.enable = true;
         yazi-nvim = {
           enable = true;
           mappings = {

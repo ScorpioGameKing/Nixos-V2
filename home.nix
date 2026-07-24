@@ -112,6 +112,10 @@ in
           name = "yt/Tony_btw";
           url = "https://www.youtube.com/feeds/videos.xml?channel_id=UC65_CVnMw6hvPET_DRDg3GA"; 
         }
+        {
+          name = "sub/.Dotfiles";
+          url = "https://dotfiles.substack.com/feed";
+        }
       ];
       openers = [
         {
