@@ -12,7 +12,8 @@
     "on-click": "pavucontrol"
   },
   "network": {
-    "format": "{essid} {signalStrength}%"
+    "format": "{essid} {signalStrength}%",
+    "on-click": "wezterm -e sudo nmtui"
   },
   "battery": {
     "format": "{capacity}% {icon}",
