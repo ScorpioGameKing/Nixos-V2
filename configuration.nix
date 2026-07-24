@@ -98,7 +98,7 @@
       telescope.enable = true;
       autocomplete.nvim-cmp.enable = true;
       binds.cheatsheet.enable = true;
-      minimap.minimap-nvim.enable = true;
+      minimap.minimap-vim.enable = true;
       #formatter.conform-nvim.enable = true;
 
       # debugger = {
