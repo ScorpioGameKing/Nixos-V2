@@ -270,6 +270,7 @@
     vim
     wget
     brightnessctl
+    pavucontrol
   ];
 
   fonts.packages = with pkgs; [
