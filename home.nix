@@ -61,8 +61,14 @@ in
 
   programs.git = {
     enable = true;
-    userName = "ScorpioGameKing";
-    userEmail = "scorpiogameking@gmail.com";
+    settings = {
+      user = {
+        name = "ScorpioGameKing";
+        email = "scorpiogameking@gmail.com";
+      };
+    };
+    # userName = "ScorpioGameKing";
+    # userEmail = "scorpiogameking@gmail.com";
   };
 
   programs.gh = {
@@ -144,6 +150,7 @@ in
       default-timeout = 3000;
     };
   };
+
   services.gpg-agent = {
       enable = true;
       pinentryPackage = pkgs.pinentry-all;
