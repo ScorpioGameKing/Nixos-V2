@@ -106,8 +106,13 @@ in
         # }
         {
           name = "yt/Vimjoyer";
-          url = "https://www.youtube.com/feeds/videos.xml?channel_id=https://www.youtube.com/@vimjoyer";
+          url = "https://www.youtube.com/feeds/videos.xml?channel_id=UC_zBdZ0_H_jn41FDRG7q4Tw";
         }
+        {
+          name = "yt/Tony_btw";
+          url = "https://www.youtube.com/feeds/videos.xml?channel_id=UC65_CVnMw6hvPET_DRDg3GA"; 
+        }
+
       ];
       openers = [
         {
