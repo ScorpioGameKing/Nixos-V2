@@ -16,6 +16,10 @@
 
   services.printing.enable = true;
   services.playerctld.enable = true;
+  services.udev.extraHwdb = ''
+    evdev:atkbd:*
+      KEYBOARD_KEY_3a=esc
+  '';
 
   hardware.graphics = {
     enable = true;
