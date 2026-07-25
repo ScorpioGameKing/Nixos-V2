@@ -15,7 +15,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = inputs @ { self, nixpkgs, stylix, home-manager, nvf, ... }: {
+  outputs = inputs @ { self, nixpkgs, stylix, home-manager, nvf, ... }: 
+    let 
+      system = "x86_64-linux";
+      pkgs = import nixpkgs { inherit system; };
+    in
+    {
 
     packages."x86_64-linux".nvim = 
       (nvf.lib.neovimConfiguration {
@@ -23,7 +28,7 @@
         modules = [ ./modules/nixos/programs/cli/nvf/nvf.nix ];
       }).neovim;
 
-    packages."x86_64-linux".steam = nixpkgs.stdenv.mkDerivation {
+    packages."x86_64-linux".steam = pkgs.stdenv.mkDerivation {
       name = "steam";
       src = ./modules/nixos/programs/gui/steam/steam.nix;
     };
