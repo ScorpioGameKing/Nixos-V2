@@ -1,6 +1,7 @@
 { inputs, pkgs, ... }: {
   imports = [
     ./hardware-configuration.nix
+    ./modules/nixos/default.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -84,7 +85,6 @@
     brightnessctl
     pavucontrol
     inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.nvim
-    inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.steam
   ];
 
   fonts.packages = with pkgs; [

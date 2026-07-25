@@ -1,5 +1,5 @@
 { ... }: {
   imports = [
-    ./programs/cli/nvf/nvf.nix
+    ./programs/gui/steam/steam.nix
   ];
 }
