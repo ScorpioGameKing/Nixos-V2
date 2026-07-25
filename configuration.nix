@@ -1,4 +1,4 @@
-{ self, pkgs, ... }: {
+{ pkgs, ... }: {
   imports = [
     ./hardware-configuration.nix
     # ./modules/nixos/default.nix
@@ -83,7 +83,7 @@
     wget
     brightnessctl
     pavucontrol
-    self.packages.${pkgs.stdenv.hostPlatform.system}.nvim
+    inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.nvim
   ];
 
   fonts.packages = with pkgs; [
