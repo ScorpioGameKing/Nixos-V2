@@ -40,6 +40,7 @@ in
   programs.btop.enable = true;
   programs.brave.enable = true;
   programs.equibop.enable = true;
+  programs.obsidian.enable = true;
 
   programs.bash = {
     enable = true;

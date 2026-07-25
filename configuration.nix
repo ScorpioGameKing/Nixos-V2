@@ -1,4 +1,5 @@
 { inputs, pkgs, ... }: {
+
   imports = [
     ./hardware-configuration.nix
     ./modules/nixos/default.nix
@@ -21,11 +22,6 @@
     evdev:atkbd:*
       KEYBOARD_KEY_3a=esc
   '';
-
-  # hardware.graphics = {
-  #   enable = true;
-  #   enable32Bit = true;
-  # };
 
   services.pipewire = {
     enable = true;
@@ -64,15 +60,6 @@
   };
 
   programs.niri.enable = true;
-  # programs.gamemode.enable = true;
-  #
-  # programs.steam = {
-  #   enable = true;
-  #   protontricks.enable = true;
-  #   remotePlay.openFirewall = true;
-  #   dedicatedServer.openFirewall = true;
-  #   extraCompatPackages = with pkgs; [ proton-ge-bin ];
-  # };
 
   programs.appimage = {
     enable = true;
@@ -80,7 +67,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    vim
     wget
     brightnessctl
     pavucontrol
