@@ -20,17 +20,17 @@
       system = "x86_64-linux";
       modules = [
         stylix.nixosModules.stylix
+        nvf.nixosModules.default
         ./configuration.nix
         home-manager.nixosModules.home-manager 
         {
-	  home-manager = {
-	    useGlobalPkgs = true;
-	    useUserPackages = true;
-	    users.scorpio = import ./home.nix;
-	    backupFileExtension = "backup";
-	  };
-	}
-        nvf.nixosModules.default
+        home-manager = {
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          users.scorpio = import ./home.nix;
+          backupFileExtension = "backup";
+          };
+        }
       ];
     };
   };
