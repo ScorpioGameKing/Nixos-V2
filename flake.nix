@@ -16,6 +16,13 @@
     };
   };
   outputs = { self, nixpkgs, stylix, home-manager, nvf, ... }: {
+
+    packages."x86_64-linux".nvim = 
+      (nvf.lib.neovimConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        modules = [ ./modules/nixos/programs/cli/nvf/nvf.nix ];
+      }).neovim;
+
     nixosConfigurations.nixBox2 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [

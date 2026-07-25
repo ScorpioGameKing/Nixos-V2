@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   imports = [
     ./hardware-configuration.nix
-    ./modules/nixos/default.nix
+    # ./modules/nixos/default.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -79,6 +79,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    vim
     wget
     brightnessctl
     pavucontrol
