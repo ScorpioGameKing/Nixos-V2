@@ -23,6 +23,11 @@
         modules = [ ./modules/nixos/programs/cli/nvf/nvf.nix ];
       }).neovim;
 
+    packages."x86_64-linux".steam = packages.stdenv.mkDerivation {
+      name = "steam";
+      src = ./modules/nixos/programs/gui/steam/steam.nix;
+    };
+
     nixosConfigurations.nixBox2 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };

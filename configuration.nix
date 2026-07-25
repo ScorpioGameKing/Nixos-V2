@@ -1,7 +1,6 @@
 { inputs, pkgs, ... }: {
   imports = [
     ./hardware-configuration.nix
-    # ./modules/nixos/default.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -16,15 +15,16 @@
 
   services.printing.enable = true;
   services.playerctld.enable = true;
+
   services.udev.extraHwdb = ''
     evdev:atkbd:*
       KEYBOARD_KEY_3a=esc
   '';
 
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };
+  # hardware.graphics = {
+  #   enable = true;
+  #   enable32Bit = true;
+  # };
 
   services.pipewire = {
     enable = true;
@@ -63,15 +63,15 @@
   };
 
   programs.niri.enable = true;
-  programs.gamemode.enable = true;
-
-  programs.steam = {
-    enable = true;
-    protontricks.enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-    extraCompatPackages = with pkgs; [ proton-ge-bin ];
-  };
+  # programs.gamemode.enable = true;
+  #
+  # programs.steam = {
+  #   enable = true;
+  #   protontricks.enable = true;
+  #   remotePlay.openFirewall = true;
+  #   dedicatedServer.openFirewall = true;
+  #   extraCompatPackages = with pkgs; [ proton-ge-bin ];
+  # };
 
   programs.appimage = {
     enable = true;
@@ -84,6 +84,7 @@
     brightnessctl
     pavucontrol
     inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.nvim
+    inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.steam
   ];
 
   fonts.packages = with pkgs; [
