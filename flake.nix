@@ -15,7 +15,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs, stylix, home-manager, nvf, ... }: {
+  outputs = inputs @ { self, nixpkgs, stylix, home-manager, nvf, ... }: {
 
     packages."x86_64-linux".nvim = 
       (nvf.lib.neovimConfiguration {
@@ -25,7 +25,6 @@
 
     nixosConfigurations.nixBox2 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
       modules = [
         stylix.nixosModules.stylix
         nvf.nixosModules.default
