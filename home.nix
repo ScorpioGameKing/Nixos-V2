@@ -156,6 +156,7 @@ in
     swaybg
     waypaper
     xwayland-satellite
+    fluent-reader
   ];
 
   xdg.configFile = builtins.mapAttrs
