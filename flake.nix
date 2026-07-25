@@ -23,7 +23,7 @@
         modules = [ ./modules/nixos/programs/cli/nvf/nvf.nix ];
       }).neovim;
 
-    packages."x86_64-linux".steam = stdenv.mkDerivation {
+    packages."x86_64-linux".steam = nixpkgs.stdenv.mkDerivation {
       name = "steam";
       src = ./modules/nixos/programs/gui/steam/steam.nix;
     };
