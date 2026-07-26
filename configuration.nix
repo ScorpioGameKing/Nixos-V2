@@ -64,6 +64,7 @@
     autoEnable = true;
     targets = {
       nvf.enable = false;
+      grub.enable = false;
     };
   };
 
