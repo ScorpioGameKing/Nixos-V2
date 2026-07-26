@@ -13,6 +13,7 @@
   boot.loader.grub.useOSProber = true;
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.configurationLimit = 20;
+  boot.loader.grub.theme = inputs.nixos-grub-themes.packages.${pkgs.system}.minegrub;
   boot.loader.efi.efiSysMountPoint = "/boot";
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
