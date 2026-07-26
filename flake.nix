@@ -14,7 +14,10 @@
       url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
+    nixos-grub-themes = {
+      url = "github:jeslie0/nixos-grub-themes";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = inputs @ { self, nixpkgs, stylix, home-manager, nvf, ... }: 
     {
