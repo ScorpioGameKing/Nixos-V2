@@ -115,7 +115,7 @@ in
       feeds = [
         {
           name = "r/Nixos";
-          url = "https://www.reddit.com/r/NixOS/.rss";
+          url = "https://www.reddit.com/r/NixOS/new/.rss";
         }
         {
           name = "yt/Vimjoyer";
