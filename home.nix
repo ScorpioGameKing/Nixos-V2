@@ -41,7 +41,6 @@ in
   programs.brave.enable = true;
   programs.equibop.enable = true;
   programs.obsidian.enable = true;
-  programs.vscodium.enable = true;
 
   programs.bash = {
     enable = true;
@@ -125,10 +124,6 @@ in
         {
           name = "yt/Tony_btw";
           url = "https://www.youtube.com/feeds/videos.xml?channel_id=UC65_CVnMw6hvPET_DRDg3GA"; 
-        }
-        {
-          name = "sub/.Dotfiles";
-          url = "https://dotfiles.substack.com/feed";
         }
       ];
       openers = [
