@@ -7,16 +7,26 @@
 
   #boot.loader.systemd-boot.enable = true;
   #boot.loader.systemd-boot.configurationLimit = 20;
-  boot.loader.systemd-boot.enable = false;
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "nodev";
-  boot.loader.grub.useOSProber = true;
-  boot.loader.grub.efiSupport = true;
-  boot.loader.grub.configurationLimit = 20;
-  boot.loader.grub.theme = inputs.nixos-grub-themes.packages.${pkgs.system}.minegrub;
-  boot.loader.efi.efiSysMountPoint = "/boot";
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot = {
+    loader = {
+      systemd-boot = {
+        enable = false;
+        configurationLimit = 20;
+      };
+      grub = {
+        enable = true;
+        device = "nodev";
+        useOSProber = true;
+        efiSupport = true;
+        theme = inputs.nixos-grub-themes.packages.${pkgs.system}.minegrub;
+      };
+      efi = { 
+        efiSysMountPoint = "/boot";
+        canTouchEfiVariables = true;
+      };
+    };
+    kernelPackages = pkgs.linuxPackages_latest;
+  };
 
   networking.hostName = "nixBox2";
   networking.networkmanager.enable = true;
