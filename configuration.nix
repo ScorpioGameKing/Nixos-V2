@@ -87,6 +87,7 @@
     wget
     brightnessctl
     pavucontrol
+    wl-mirror
     inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.nvim
   ];
 
