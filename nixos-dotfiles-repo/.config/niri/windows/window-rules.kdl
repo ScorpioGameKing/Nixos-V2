@@ -32,8 +32,8 @@ window-rule {
 
 // Open wl-mirror on HDMI-A-1 for proper screen mirroring
 window-rule {
-  match app-id=r#"at.yrlf.wl_mirror"#
-  open-on-output "HDMI-A-1"
+  match app-id="at.yrlf.wl_mirror"
+  open-on-output "PNP(GSV) GSV2x2 DEMO 0x00000001"
 }
 
 // Open Web Browsers on Browser Space
@@ -67,7 +67,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="LogicWorld Mod Editor"
+    match title=r#"LogicWorld\ Mod\ Editor"#
     opacity 1.0
 }
 
