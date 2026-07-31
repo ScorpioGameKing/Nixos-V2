@@ -40,10 +40,10 @@
   '';
 
   services.pulseaudio.enable = true;
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
-  # };
+  services.pipewire = {
+    enable = false;
+    pulse.enable = false;
+  };
 
   services.libinput.enable = true;
 
