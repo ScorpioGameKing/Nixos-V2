@@ -82,6 +82,7 @@
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     libpulseaudio
+    alsa-lib
   ];
   programs.appimage = {
     enable = true;
