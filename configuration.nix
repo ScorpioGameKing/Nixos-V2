@@ -39,10 +39,11 @@
       KEYBOARD_KEY_3a=esc
   '';
 
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
+  services.pulseaudio.enable = true;
+  # services.pipewire = {
+  #   enable = true;
+  #   pulse.enable = true;
+  # };
 
   services.libinput.enable = true;
 
