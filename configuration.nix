@@ -82,7 +82,6 @@
   programs.appimage = {
     enable = true;
     binfmt = true;
-    package = pkgs.squashfuse.override { zstdSupport = true; };
   };
 
   environment.systemPackages = with pkgs; [
