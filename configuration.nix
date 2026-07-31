@@ -84,6 +84,7 @@
     libpulseaudio
     alsa-lib
     libsm
+    libice
   ];
   programs.appimage = {
     enable = true;
