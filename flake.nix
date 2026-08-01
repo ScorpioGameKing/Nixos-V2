@@ -18,8 +18,12 @@
       url = "github:jeslie0/nixos-grub-themes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    polymc = {
+      url = "github:PolyMC/PolyMC";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = inputs @ { self, nixpkgs, stylix, home-manager, nvf, ... }: 
+  outputs = inputs @ { self, nixpkgs, stylix, home-manager, nvf, polymc, ... }: 
     {
 
     packages."x86_64-linux".nvim = 
