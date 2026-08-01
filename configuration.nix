@@ -98,7 +98,6 @@
     pavucontrol
     wl-mirror
     inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.nvim
-    inputs.polymc.packages.${system}.polymc
   ];
 
   fonts.packages = with pkgs; [
