@@ -88,6 +88,7 @@
     libice
     libx11
     libxext
+    libxcursor
   ];
   programs.appimage = {
     enable = true;
