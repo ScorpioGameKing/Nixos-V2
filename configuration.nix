@@ -87,6 +87,7 @@
     libsm
     libice
     libx11
+    libxext
   ];
   programs.appimage = {
     enable = true;
