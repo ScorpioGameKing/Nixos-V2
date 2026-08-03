@@ -92,6 +92,7 @@
     libxi
     libxinerama
     libxrandr
+    libopengl
   ];
   programs.appimage = {
     enable = true;
