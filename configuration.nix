@@ -86,6 +86,7 @@
     alsa-lib
     libsm
     libice
+    libx11
   ];
   programs.appimage = {
     enable = true;
