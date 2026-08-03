@@ -90,6 +90,7 @@
     libxext
     libxcursor
     libxi
+    libxinerama
   ];
   programs.appimage = {
     enable = true;
