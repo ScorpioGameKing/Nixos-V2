@@ -91,7 +91,7 @@
     libxcursor
     libxi
     libxinerama
-    libxrabdr
+    libxrandr
   ];
   programs.appimage = {
     enable = true;
