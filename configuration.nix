@@ -104,6 +104,7 @@
     brightnessctl
     pavucontrol
     wl-mirror
+    proton-vpn
     inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.nvim
   ];
 
