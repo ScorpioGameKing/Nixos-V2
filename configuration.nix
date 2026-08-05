@@ -29,6 +29,7 @@
 
   networking.hostName = "nixBox2";
   networking.networkmanager.enable = true;
+  networking.firewall.checkReversePath = false;
 
   time.timeZone = "America/New_York";
 
