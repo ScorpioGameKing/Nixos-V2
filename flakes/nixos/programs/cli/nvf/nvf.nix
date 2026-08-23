@@ -168,6 +168,7 @@
       python.enable = true;
       toml.enable = true;
       json.enable = true;
+      typescript.enable = true;
       qml.enable = true;
       yaml.enable = true;
     };
