@@ -61,6 +61,17 @@ window-rule {
 }
 
 // Opacity rules for games and such
+
+window-rule {
+    match app-id="game.exe"
+    opacity 1.0
+}
+
+window-rule {
+    match app-id="RPG Maker MV"
+    opacity 1.0
+}
+
 window-rule {
     match app-id="HytaleClient"
     opacity 1.0

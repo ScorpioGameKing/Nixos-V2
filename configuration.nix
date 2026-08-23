@@ -106,6 +106,7 @@
     wl-mirror
     wireguard-tools
     proton-vpn
+    libreoffice-qt-fresh
     inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.nvim
   ];
 
